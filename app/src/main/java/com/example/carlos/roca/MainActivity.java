@@ -1,5 +1,6 @@
 package com.example.carlos.roca;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,14 +28,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    @Override public boolean onCreateOptionsMenu(Menu mimenu) {
-        getMenuInflater().inflate(R.menu.menu_en_activity,mimenu);
+    @Override
+    public boolean onCreateOptionsMenu(Menu mi_menu) {
+        getMenuInflater().inflate(R.menu.menu_en_activity,mi_menu);
         return true;
-
     }
 
-    @Override public boolean onOptionsItemSeleted (MenuItem opcion_menu) {
-        int id=opcion_menu.getItemId();
+    @Override
+    public boolean onOptionItemSelected(MenuItem option_item){
+        int id=option_item.getItemId();
 
         if(id==R.id.configuracion) {
             return true;
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        return super.onOptionsItemSelected(opcion_menu);
+        return super.onOptionsItemSelected(option_item);
     }
+
+
+
 }
