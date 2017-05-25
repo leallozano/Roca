@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionItemSelected(MenuItem option_item){
+    public boolean onOptionItemSelected (MenuItem option_item){
         int id=option_item.getItemId();
 
         if(id==R.id.configuracion) {
